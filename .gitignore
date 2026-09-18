@@ -1,0 +1,12 @@
+data/raw/
+data/processed/
+.env
+.env.*
+!.env.example
+*.bak
+*.mdf
+*.ldf
+*.log
+~$*
+.DS_Store
+Thumbs.db
