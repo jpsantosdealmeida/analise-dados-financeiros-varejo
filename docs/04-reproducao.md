@@ -6,7 +6,7 @@ Os scripts foram recuperados da conversa, sem acesso ao banco ou aos anexos. Nã
 
 ## Preparação
 
-1. Baixar o XLSX na fonte UCI indicada no README.
+1. Baixar o XLSX pelo link de Releases no README ou na fonte UCI. Consulte o [hash do anexo](../data/README.md).
 2. Preservar o original e registrar data de obtenção e hash.
 3. Exportar separadamente as abas anuais para os dois CSVs esperados pelo script.
 4. Confirmar oito colunas na ordem: Invoice, StockCode, Description, Quantity, InvoiceDate, Price, CustomerID, Country.
