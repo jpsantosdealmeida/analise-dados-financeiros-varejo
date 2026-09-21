@@ -9,7 +9,7 @@ Este projeto registra minha investigação do dataset Online Retail II: das prim
 ## Perguntas da investigação
 
 - **H1:** para o mesmo produto e quantidade comparável, registros sem `CustomerID` apresentam preço unitário maior?
-- **H2:** para o mesmo produto, quantidades maiores estão associadas a preços unitários menores?
+- **H2 (reformulada em 21/09/2026):** para o mesmo produto, o preço unitário tende a diminuir em determinadas faixas de quantidade?
 
 As duas hipóteses estão **em investigação**. Ausência de identificação não comprova que o cliente não tinha cadastro, e associação não demonstra causa.
 
@@ -22,10 +22,13 @@ As duas hipóteses estão **em investigação**. Ausência de identificação n�
 | Consolidação de duas abas no SQL Server com `SourceSheet` | Execução relatada; reconciliação da carga pendente |
 | Comparação por produto | Consulta histórica disponível |
 | Comparação por produto e quantidade | Segunda abordagem documentada |
-| Definição da unidade de análise e validação de H1/H2 | Em andamento |
+| H2: mediana e contagem por quantidade para `84077` | Consulta documentada; patamares e contraexemplos relatados |
+| Controle de período e identificação; validação de H1/H2 | Em andamento |
 | Modelo dimensional, Power BI e DAX | Etapas futuras, condicionadas à necessidade |
 
 **Estado da verificação:** esta versão foi organizada a partir do histórico de desenvolvimento. Os anexos, o banco SQL Server e os resultados completos não estavam disponíveis para reexecução. Nenhuma métrica exploratória é apresentada como conclusão validada.
+
+**Atualização de 21/09/2026:** a análise de H2 avançou para medianas e contagens por quantidade. A hipótese foi reformulada após contraexemplos; período e presença de `CustomerID` são os próximos controles. Detalhes no [diário](docs/03-diario-de-investigacao.md).
 
 ## Principal aprendizado até aqui
 
