@@ -4,7 +4,7 @@
 
 Uma consulta pode estar correta em SQL e ainda produzir uma comparação que não responde à pergunta.
 
-No meu projeto com o Online Retail II, comecei investigando se registros sem identificação de cliente apresentavam preços maiores para o mesmo produto.
+No meu projeto Análise de Dados Financeiros no Varejo, utilizando o Online Retail II, comecei investigando se registros sem identificação de cliente apresentavam preços maiores para o mesmo produto.
 
 A primeira comparação usava o código do produto. Então percebi que a quantidade comprada também precisava entrar na discussão: eu podia estar comparando uma unidade com uma compra em volume.
 
@@ -20,7 +20,7 @@ O aprendizado até aqui: antes de interpretar um percentual, preciso conseguir e
 
 Estou documentando esse processo no GitHub, incluindo as tentativas e suas limitações.
 
-https://github.com/jpsantosdealmeida/online-retail-ii-analise
+https://github.com/jpsantosdealmeida/analise-dados-financeiros-varejo
 
 #SQL #AnaliseDeDados #PortfolioDeDados
 
