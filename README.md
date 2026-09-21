@@ -1,4 +1,6 @@
-# Online Retail II — investigação de preços e qualidade dos dados
+# Análise de Dados Financeiros no Varejo
+
+Investigação de preços, transações e qualidade dos dados.
 
 **Projeto em desenvolvimento · SQL Server · Excel · Análise exploratória**
 
@@ -26,7 +28,7 @@ As duas hipóteses estão **em investigação**. Ausência de identificação n�
 | Controle de período e identificação; validação de H1/H2 | Em andamento |
 | Modelo dimensional, Power BI e DAX | Etapas futuras, condicionadas à necessidade |
 
-**Estado da verificação:** esta versão foi organizada a partir do histórico de desenvolvimento. Os anexos, o banco SQL Server e os resultados completos não estavam disponíveis para reexecução. Nenhuma métrica exploratória é apresentada como conclusão validada.
+**Estado da verificação:** esta versão foi organizada a partir do histórico de desenvolvimento. O banco SQL Server e os resultados completos não foram reexecutados. A planilha de origem está disponível para download na seção abaixo. Nenhuma métrica exploratória é apresentada como conclusão validada.
 
 **Atualização de 21/09/2026:** a análise de H2 avançou para medianas e contagens por quantidade. A hipótese foi reformulada após contraexemplos; período e presença de `CustomerID` são os próximos controles. Detalhes no [diário](docs/03-diario-de-investigacao.md).
 
@@ -42,7 +44,13 @@ Fonte: [Online Retail II — UCI](https://archive.ics.uci.edu/dataset/502/online
 
 Referência: Chen, D. (2012). *Online Retail II*. UCI Machine Learning Repository. [DOI: 10.24432/C5CG6D](https://doi.org/10.24432/C5CG6D). Dados sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-Os arquivos originais não são redistribuídos neste repositório. Veja [fonte e dicionário](docs/01-dados.md).
+### Baixar a base e conhecer sua origem
+
+- **[Baixar a planilha online_retail_II.xlsx](https://github.com/jpsantosdealmeida/analise-dados-financeiros-varejo/releases/download/dados-v1/online_retail_II.xlsx)** — arquivo fornecido pelo autor, anexado sem alterações à [versão de dados](https://github.com/jpsantosdealmeida/analise-dados-financeiros-varejo/releases/tag/dados-v1) (45,6 MB).
+- **[Mais informações sobre a base na UCI](https://archive.ics.uci.edu/dataset/502/online+retail+ii)** — descrição, variáveis, referência e download oficial.
+- [Fonte e dicionário](docs/01-dados.md) e [integridade do arquivo](data/README.md).
+
+Online Retail II é o nome da base de dados; **Análise de Dados Financeiros no Varejo** é o nome deste projeto.
 
 ## Organização
 
@@ -57,7 +65,7 @@ conteudo/             pautas e rascunhos para LinkedIn
 ## Como acompanhar ou reproduzir
 
 1. Leia o [contexto e escopo](docs/00-contexto.md).
-2. Obtenha o arquivo original na UCI e preserve uma cópia sem alterações.
+2. Baixe a planilha pelo link acima ou diretamente na UCI e preserve uma cópia sem alterações.
 3. Consulte as [instruções de reprodução](docs/04-reproducao.md).
 4. Leia os comentários dos scripts em [sql/historico](sql/historico/README.md) antes de executar.
 5. Registre consultas, filtros e resultados usando o [modelo de investigação](docs/modelo-investigacao.md).
