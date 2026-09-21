@@ -1,4 +1,4 @@
-# Contexto e escopo
+# Contexto — Análise de Dados Financeiros no Varejo
 
 ## Objetivo
 
