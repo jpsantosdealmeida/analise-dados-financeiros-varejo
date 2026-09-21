@@ -8,7 +8,11 @@ Uma comparação adequada precisa declarar população elegível, unidade de an�
 
 ## H2 — quantidade e preço
 
-Para o mesmo produto, quantidades maiores estão associadas a menor preço unitário?
+**Formulação inicial:** para o mesmo produto, quantidades maiores estão associadas a menor preço unitário?
+
+**Reformulação em 21/09/2026:** para o mesmo produto, o preço unitário tende a diminuir em determinadas faixas de quantidade, em vez de diminuir continuamente?
+
+A exploração do produto `84077` passou a usar mediana e contagem por quantidade. Foram relatados patamares, contraexemplos e diferenças por presença de `CustomerID`. É necessário controlar o período antes de atribuir o padrão a descontos por volume. Veja o [registro de 21/09](03-diario-de-investigacao.md).
 
 Exemplos visuais motivaram a hipótese, mas não demonstram política de desconto nem relação causal. Também é preciso procurar produtos e períodos em que a relação não aparece ou se inverte.
 
@@ -18,7 +22,8 @@ Exemplos visuais motivaram a hipótese, mas não demonstram política de descont
 2. Percepção de que Quantity também varia entre grupos.
 3. Inclusão de Quantity no JOIN.
 4. Identificação de multiplicação de pares e recorte ordenado por TOP.
-5. Próxima decisão: escolher uma representação por grupo e justificar a ponderação.
+5. Exploração de H2 para `84077` com mediana e contagem por quantidade; reformulação da hipótese.
+6. Próxima decisão: controlar período e identificação, avaliar país e justificar a ponderação. A definição completa para H1 permanece aberta.
 
 Se um grupo tem 500 linhas e o outro 300 para a mesma chave, o JOIN pode produzir 150.000 pares. Eles compartilham observações de origem; não são 150.000 vendas independentes.
 
