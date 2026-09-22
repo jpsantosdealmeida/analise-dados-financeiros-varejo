@@ -59,3 +59,27 @@ Esta consulta representa uma linha por quantidade no resultado e mantém as obse
 Definir uma comparação por produto, quantidade, período e presença/ausência de `CustomerID`, com contagens por grupo; avaliar também país. Verificar se os aparentes patamares coexistem no mesmo período ou refletem mudanças de preço no tempo. Preservar contraexemplos e justificar qualquer filtro.
 
 **Limite da revisão:** registro documental baseado na conversa e na SQL nela apresentada. O banco e o arquivo H2.csv não foram recalculados nesta atualização; números citados na conversa não são promovidos a resultados validados. H1 e H2 permanecem abertas.
+
+## 22/09/2026 — desenho da comparação mensal entre registros com e sem ID
+
+Na conversa de desenvolvimento, o autor desenhou a comparação de medianas para uma mesma quantidade e escolheu **mês** como granularidade temporal: o dia poderia fragmentar demais as observações, enquanto o ano poderia esconder mudanças de preço. É uma escolha inicial a avaliar pela quantidade de observações em cada grupo.
+
+Para o produto em investigação (`84077`), o desenho proposto passou a ser:
+
+| Ano-mês | Quantity | Mediana com ID | Observações com ID | Mediana sem ID | Observações sem ID |
+|---|---|---|---|---|---|
+| A calcular | A calcular | A calcular | A calcular | A calcular | A calcular |
+
+O agrupamento deve preservar **ano e mês**, para não misturar meses de anos diferentes. A classificação é presença/ausência de `CustomerID`, não um identificador individual representando a mediana do grupo.
+
+### Critérios discutidos antes da execução
+
+- Medianas iguais nos grupos comparáveis indicariam ausência de diferença **nessa medida e nesse recorte**, sem demonstrar ausência de efeito causal.
+- Mediana maior no grupo sem ID, para o mesmo produto, quantidade e ano-mês, seria evidência compatível com a direção de H1, ainda sujeita a outras variáveis e ao tamanho dos grupos. Uma diferença na direção oposta não sustenta H1 como formulada.
+- Se apenas um grupo estiver presente em determinado recorte, falta comparação direta; não se deve converter ausência de observações em preço zero ou comparar períodos diferentes como se fossem equivalentes.
+
+O autor reconheceu a limitação do cenário sem grupos comparáveis. A conversa também reforçou a distinção entre associação e causalidade e a necessidade de manter as contagens junto às medianas.
+
+**Estado:** avanço no desenho metodológico. Os cenários usados na conversa eram exemplos hipotéticos, não resultados extraídos do banco. Ainda não foi apresentada a SQL desta comparação mensal nem seu resultado. Nenhuma consulta foi executada nesta revisão; H1 e H2 permanecem abertas.
+
+**Próximo passo:** o autor construir a consulta por ano-mês, quantidade e situação do ID, apresentar resultados com contagens e avaliar cobertura dos dois grupos, país e demais filtros.
